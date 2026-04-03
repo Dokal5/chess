@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser Chess</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="Chess game application">
+      <section class="board-section" aria-label="Chess board section">
+        <div class="header-row">
+          <h1>Chess</h1>
+          <button id="restartBtn" class="button" type="button">Restart Game</button>
+        </div>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+        <div id="board" class="board" role="grid" aria-label="Chess board"></div>
+      </section>
+
+      <aside class="side-panel" aria-label="Game information">
+        <h2>Move History</h2>
+        <ol id="history" class="history"></ol>
+      </aside>
+    </main>
+
+    <div id="promotionModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="promotionTitle">
+      <div class="modal-content">
+        <h3 id="promotionTitle">Choose promotion</h3>
+        <div id="promotionChoices" class="promotion-choices"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
